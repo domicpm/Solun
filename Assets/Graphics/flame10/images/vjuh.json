@@ -1,0 +1,137 @@
+{ "skeleton": { "images": "D:/исходники/VFX/vjuh/images/" },
+"PhotoshopToSpine": { "scale": 0.71, "padding": 1, "trim": true },
+"bones": [
+	{ "name": "root" }
+],
+"slots": [
+	{ "name": "light", "bone": "root", "attachment": "light" },
+	{ "name": "vjuh_00029", "bone": "root", "attachment": "vjuh_00029" },
+	{ "name": "vjuh_00002", "bone": "root", "attachment": "vjuh_00002" },
+	{ "name": "vjuh_00003", "bone": "root", "attachment": "vjuh_00003" },
+	{ "name": "vjuh_00004", "bone": "root", "attachment": "vjuh_00004" },
+	{ "name": "vjuh_00005", "bone": "root", "attachment": "vjuh_00005" },
+	{ "name": "vjuh_00006", "bone": "root", "attachment": "vjuh_00006" },
+	{ "name": "vjuh_00007", "bone": "root", "attachment": "vjuh_00007" },
+	{ "name": "vjuh_00008", "bone": "root", "attachment": "vjuh_00008" },
+	{ "name": "vjuh_00009", "bone": "root", "attachment": "vjuh_00009" },
+	{ "name": "vjuh_00010", "bone": "root", "attachment": "vjuh_00010" },
+	{ "name": "vjuh_00011", "bone": "root", "attachment": "vjuh_00011" },
+	{ "name": "vjuh_00012", "bone": "root", "attachment": "vjuh_00012" },
+	{ "name": "vjuh_00013", "bone": "root", "attachment": "vjuh_00013" },
+	{ "name": "vjuh_00014", "bone": "root", "attachment": "vjuh_00014" },
+	{ "name": "vjuh_00015", "bone": "root", "attachment": "vjuh_00015" },
+	{ "name": "vjuh_00016", "bone": "root", "attachment": "vjuh_00016" },
+	{ "name": "vjuh_00017", "bone": "root", "attachment": "vjuh_00017" },
+	{ "name": "vjuh_00018", "bone": "root", "attachment": "vjuh_00018" },
+	{ "name": "vjuh_00019", "bone": "root", "attachment": "vjuh_00019" },
+	{ "name": "vjuh_00020", "bone": "root", "attachment": "vjuh_00020" },
+	{ "name": "vjuh_00021", "bone": "root", "attachment": "vjuh_00021" },
+	{ "name": "vjuh_00022", "bone": "root", "attachment": "vjuh_00022" },
+	{ "name": "vjuh_00023", "bone": "root", "attachment": "vjuh_00023" },
+	{ "name": "vjuh_00024", "bone": "root", "attachment": "vjuh_00024" },
+	{ "name": "vjuh_00025", "bone": "root", "attachment": "vjuh_00025" },
+	{ "name": "vjuh_00026", "bone": "root", "attachment": "vjuh_00026" },
+	{ "name": "vjuh_00027", "bone": "root", "attachment": "vjuh_00027" },
+	{ "name": "vjuh_00028", "bone": "root", "attachment": "vjuh_00028" },
+	{ "name": "vjuh", "bone": "root", "attachment": "vjuh" },
+	{ "name": "vjuh2", "bone": "root", "attachment": "vjuh2" },
+],
+"skins": {
+	"default": {
+		"light": {
+			"light": { "x": 594.33, "y": -547.29, "width": 1442, "height": 885 }
+		},
+		"vjuh_00029": {
+			"vjuh_00029": { "x": 1186.87, "y": -597.65, "width": 179, "height": 395 }
+		},
+		"vjuh_00002": {
+			"vjuh_00002": { "x": 1117.14, "y": -593.91, "width": 200, "height": 95 }
+		},
+		"vjuh_00003": {
+			"vjuh_00003": { "x": 1065.02, "y": -595.83, "width": 340, "height": 167 }
+		},
+		"vjuh_00004": {
+			"vjuh_00004": { "x": 1013.4, "y": -597.96, "width": 481, "height": 238 }
+		},
+		"vjuh_00005": {
+			"vjuh_00005": { "x": 967.16, "y": -598.32, "width": 593, "height": 287 }
+		},
+		"vjuh_00006": {
+			"vjuh_00006": { "x": 928.77, "y": -596.7, "width": 671, "height": 315 }
+		},
+		"vjuh_00007": {
+			"vjuh_00007": { "x": 892.35, "y": -595.84, "width": 743, "height": 336 }
+		},
+		"vjuh_00008": {
+			"vjuh_00008": { "x": 859.74, "y": -594.4, "width": 807, "height": 353 }
+		},
+		"vjuh_00009": {
+			"vjuh_00009": { "x": 829.81, "y": -592.72, "width": 865, "height": 361 }
+		},
+		"vjuh_00010": {
+			"vjuh_00010": { "x": 801.43, "y": -591.67, "width": 919, "height": 366 }
+		},
+		"vjuh_00011": {
+			"vjuh_00011": { "x": 775.1, "y": -591.17, "width": 970, "height": 365 }
+		},
+		"vjuh_00012": {
+			"vjuh_00012": { "x": 749.9, "y": -589.09, "width": 1019, "height": 358 }
+		},
+		"vjuh_00013": {
+			"vjuh_00013": { "x": 725.75, "y": -582.83, "width": 1063, "height": 354 }
+		},
+		"vjuh_00014": {
+			"vjuh_00014": { "x": 706.2, "y": -572.13, "width": 1102, "height": 361 }
+		},
+		"vjuh_00015": {
+			"vjuh_00015": { "x": 691.72, "y": -564.69, "width": 1127, "height": 366 }
+		},
+		"vjuh_00016": {
+			"vjuh_00016": { "x": 686.57, "y": -561.43, "width": 1138, "height": 368 }
+		},
+		"vjuh_00017": {
+			"vjuh_00017": { "x": 691.8, "y": -560.41, "width": 1130, "height": 383 }
+		},
+		"vjuh_00018": {
+			"vjuh_00018": { "x": 697.03, "y": -560.63, "width": 1122, "height": 409 }
+		},
+		"vjuh_00019": {
+			"vjuh_00019": { "x": 695.98, "y": -564.98, "width": 1127, "height": 439 }
+		},
+		"vjuh_00020": {
+			"vjuh_00020": { "x": 685.97, "y": -571.67, "width": 1151, "height": 468 }
+		},
+		"vjuh_00021": {
+			"vjuh_00021": { "x": 681.82, "y": -578.12, "width": 1164, "height": 488 }
+		},
+		"vjuh_00022": {
+			"vjuh_00022": { "x": 706.31, "y": -579.17, "width": 1115, "height": 483 }
+		},
+		"vjuh_00023": {
+			"vjuh_00023": { "x": 721.47, "y": -580.48, "width": 1080, "height": 470 }
+		},
+		"vjuh_00024": {
+			"vjuh_00024": { "x": 929.53, "y": -577.9, "width": 664, "height": 462 }
+		},
+		"vjuh_00025": {
+			"vjuh_00025": { "x": 883.02, "y": -587.9, "width": 757, "height": 482 }
+		},
+		"vjuh_00026": {
+			"vjuh_00026": { "x": 886.02, "y": -577.05, "width": 763, "height": 439 }
+		},
+		"vjuh_00027": {
+			"vjuh_00027": { "x": 887.73, "y": -588.43, "width": 765, "height": 422 }
+		},
+		"vjuh_00028": {
+			"vjuh_00028": { "x": 1173.62, "y": -608.95, "width": 188, "height": 375 }
+		},
+		"vjuh": {
+			"vjuh": { "x": 1203.42, "y": -588.83, "width": 134, "height": 579 }
+		},
+		"vjuh2": {
+			"vjuh2": { "x": 1209.99, "y": -588.75, "width": 194, "height": 647 }
+		}
+	}
+},
+"animations": { "animation": {} }
+}

@@ -7,11 +7,14 @@ public class PlayerMovement : MonoBehaviour
 
     private Rigidbody2D rb;
     public bool isGrounded = false;
-
+    public float doubleTapMaxDelay = 0.3f; // maximal erlaubte Zeit zwischen zwei Taps
+    private float lastTapTime = 0;
     public Transform groundCheck;
     public float checkRadius = 0.2f;
     public LayerMask groundLayer;
+    public SaveSquarePos sqp;
 
+    public Vector2 recentSquarePos;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -32,6 +35,28 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+        }
+        if (Input.touchCount > 0 && isGrounded)
+        {
+            Touch touch = Input.GetTouch(0);
+
+            if (touch.phase == TouchPhase.Began)
+            {
+                if (Time.time - lastTapTime < doubleTapMaxDelay)
+                {
+                    rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+                }
+
+                lastTapTime = Time.time;
+            }
+        }
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Shadow"))
+        {
+            Debug.Log("triggered");
+           recentSquarePos = sqp.SavePos();
         }
     }
 }

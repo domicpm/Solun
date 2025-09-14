@@ -7,6 +7,7 @@ public class PlayerLightDamage : MonoBehaviour
     public SpriteRenderer spriteRenderer; // SpriteRenderer des Players
     public float fadeSpeed = 4f; // Geschwindigkeit des Fadens
     public static bool isDead = false;
+    public PlayerParticleExplosion ppe;
     void Update()
     {
         // Position des Players
@@ -30,16 +31,25 @@ public class PlayerLightDamage : MonoBehaviour
             if (c.a <= 0.01f) // kleiner Schwellwert
             {
                 Debug.Log("Dead");
+
+                if (ppe != null)
+                {
+                    ppe.ParticleExplosion(transform.position);
+                }
+                else
+                {
+                    Debug.LogWarning("ParticleManager (ppe) ist nicht gesetzt!");
+                }
+
                 Destroy(gameObject);
             }
+
         }
         else
         {
             Color c = spriteRenderer.color; // aktuelle Farbe holen
             c.a = Mathf.Lerp(c.a, 1,  fadeSpeed * Time.deltaTime);
             spriteRenderer.color = c;
-
-
         }
     }
 }

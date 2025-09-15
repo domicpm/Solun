@@ -6,6 +6,8 @@ public class SaveSquarePos : MonoBehaviour
 {
     public PlayerMovement pm;
     public Rigidbody2D rb;
+    public bool isTriggered = false;
+    public Vector2 recentSquarePos;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,13 +19,19 @@ public class SaveSquarePos : MonoBehaviour
     {
         
     }
-    public Vector2 SavePos()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        return gameObject.transform.position;
+        if (collision.gameObject.CompareTag("Player") && !isTriggered)
+        {
+                isTriggered = true;
+                recentSquarePos = gameObject.transform.position;
+                Debug.Log("Pos:" + recentSquarePos);           
+        }
     }
+
     public void ReturnSquare()
     {
-        gameObject.transform.position = pm.recentSquarePos;
+        gameObject.transform.position = recentSquarePos;
         rb.velocity = Vector2.zero;
         rb.angularVelocity = 0f;
     }

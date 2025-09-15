@@ -4,7 +4,6 @@ public class PlayerMovement : MonoBehaviour
 {
     public float speed = 5f;
     public float jumpForce = 10f;
-
     private Rigidbody2D rb;
     public bool isGrounded = false;
     public float doubleTapMaxDelay = 0.3f; // maximal erlaubte Zeit zwischen zwei Taps
@@ -12,9 +11,7 @@ public class PlayerMovement : MonoBehaviour
     public Transform groundCheck;
     public float checkRadius = 0.2f;
     public LayerMask groundLayer;
-    public SaveSquarePos sqp;
-
-    public Vector2 recentSquarePos;
+    public SaveSquarePos lastSquare; // das zuletzt berührte Square
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -36,6 +33,7 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         }
+
         if (Input.touchCount > 0 && isGrounded)
         {
             Touch touch = Input.GetTouch(0);
@@ -51,12 +49,17 @@ public class PlayerMovement : MonoBehaviour
             }
         }
     }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Shadow"))
+        if (collision.gameObject.CompareTag("Shadow")) // dein Square-Tag
         {
-            Debug.Log("triggered");
-           recentSquarePos = sqp.SavePos();
+            SaveSquarePos square = collision.gameObject.GetComponent<SaveSquarePos>();
+            if (square != null)
+            {
+              lastSquare = square;
+              Debug.Log("Neues aktives Square: " + square.name);
+            }
         }
     }
 }

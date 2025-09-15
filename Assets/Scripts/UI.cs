@@ -8,7 +8,7 @@ public class UI : MonoBehaviour
 {
     public Button Returnbutton;
     public Vector3 newpos;
-    public SaveSquarePos sqp;
+    public PlayerMovement pm;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,9 +24,9 @@ public class UI : MonoBehaviour
     {
         Debug.Log("OnReturnClicked aufgerufen von: " + gameObject.name);
 
-        if (sqp != null)
+        if (pm.lastSquare != null)
         {
-            sqp.ReturnSquare();
+            pm.lastSquare.ReturnSquare();
             Debug.Log("sqp clicked");
         }
         else
